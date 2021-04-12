@@ -42,7 +42,7 @@ class ShowWeather extends React.Component{
 	
 	render() {
 		return (
-			<div>
+			<div class="container">
 				<div class="form-group row">
 					<div class="col-auto">
 						<div class="input-group">
