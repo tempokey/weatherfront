@@ -1,10 +1,12 @@
 import React,{useState} from 'react';
 import ReactDOM from 'react-dom';
+import Cities from './Cities';
 
 class ShowWeather extends React.Component{
 	constructor(props) {
 		super(props);
 		this.state = {weather:'',cityNum:''};
+		this.cities = Cities.cities;
 
 		this.handleChange = this.handleChange.bind(this);
 		this.handleSearch = this.handleSearch.bind(this);
@@ -49,9 +51,7 @@ class ShowWeather extends React.Component{
 							</div>
 							<div class="form-control">
 								<select onChange={this.handleChange}>
-									<option value ="1">北京</option>
-									<option value ="2" selected>朝阳</option>
-									<option value="3">顺义</option>
+									{this.cities.map((item,i) => <option value={item.value}>{item.city}</option>)}
 								</select>
 							</div>
 							<div>
