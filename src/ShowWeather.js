@@ -5,7 +5,7 @@ import Cities from './Cities';
 class ShowWeather extends React.Component{
 	constructor(props) {
 		super(props);
-		this.state = {weather:'',cityNum:''};
+		this.state = {weather:'',cityNum:'1'};
 		this.cities = Cities.cities;
 
 		this.handleChange = this.handleChange.bind(this);
